@@ -21,7 +21,7 @@ services:
     restart: always
     ports:
       - "50010:50010"
-      - "50075:50075"
+      - "50575:50075"
       - "9864:9864"
     volumes:
       - hadoop_datanode:/hadoop/dfs/data
@@ -36,7 +36,7 @@ services:
     restart: always
     ports:
       - "50011:50010" # Cambié el puerto a 50011 para evitar conflicto
-      - "50076:50075" # Cambié el puerto a 50076 para evitar conflicto
+      - "50576:50075" # Cambié el puerto a 50076 para evitar conflicto
       - "9871:9864"
     volumes:
       - hadoop_datanode2:/hadoop/dfs/data
@@ -51,7 +51,7 @@ services:
     restart: always
     ports:
       - "50012:50010" # Cambié el puerto a 50012 para evitar conflicto
-      - "50077:50075" # Cambié el puerto a 50077 para evitar conflicto
+      - "50577:50075" # Cambié el puerto a 50077 para evitar conflicto
       - "9872:9864"
     volumes:
       - hadoop_datanode3:/hadoop/dfs/data
@@ -141,12 +141,6 @@ services:
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:2.3.0
     container_name: hive-metastore-postgresql
-
-  presto-coordinator:
-    image: shawnzhu/prestodb:0.181
-    container_name: presto-coordinator
-    ports:
-      - "8080:8080"
 
 volumes:
   hadoop_namenode:

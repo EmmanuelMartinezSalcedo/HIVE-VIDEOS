@@ -74,8 +74,8 @@ def generate_csv_from_json(input_folder_path, output_folder_path):
   print("Los archivos CSV se han generado correctamente")
 
 def main():
-  input_folder_path = '/user/hadoop/HIVE/Videos_json'
-  output_folder_path = '/user/hadoop/HIVE/Videos_csv'
+  input_folder_path = '/user/hadoop/Videos_json'
+  output_folder_path = '/user/hadoop/Videos_csv'
   generate_csv_from_json(input_folder_path, output_folder_path)
 
 if __name__ == '__main__':
